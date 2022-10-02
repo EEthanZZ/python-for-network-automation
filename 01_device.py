@@ -17,3 +17,9 @@ print()
 # PRETTY PRINT
 print("-----------------PPRINT----------------")
 pprint(device)
+
+# for loop, formmatted print
+
+print("\n----------------FOR LOOP----------------")
+for key, value in device.items():
+    print(f'{key}: {value}')
