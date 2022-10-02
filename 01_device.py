@@ -22,4 +22,4 @@ pprint(device)
 
 print("\n----------------FOR LOOP----------------")
 for key, value in device.items():
-    print(f'{key}: {value}')
+    print(f'{key:>16s}: {value}')
