@@ -13,5 +13,7 @@ device = {
 print("\n----------------SIMPLE PRINT---------------")
 print("device: ", device)
 print("device name: ", device["name"])
-
+print()
 # PRETTY PRINT
+print("-----------------PPRINT----------------")
+pprint(device)
