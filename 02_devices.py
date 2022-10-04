@@ -11,4 +11,8 @@ for i in range(0, 5):
         + choice(["L", "U"])
         + choice(string.ascii_letters)
     )
+    devices["vendor"] = choice(["cisco", "juniper", "asista"])
+    if devices["vendor"] == "cisco":
+        devices["os"] = choice(["ios", "iosxe", "iosxr", "nexus"])
+        devices["version"] = choice(["12.1(T).04", "14.07X", "8.12(S).101"])
     print(devices)
