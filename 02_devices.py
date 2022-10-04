@@ -15,4 +15,8 @@ for i in range(0, 5):
     if devices["vendor"] == "cisco":
         devices["os"] = choice(["ios", "iosxe", "iosxr", "nexus"])
         devices["version"] = choice(["12.1(T).04", "14.07X", "8.12(S).101"])
+    elif devices["vendor"] == "juniper":
+        devices["os"] = "junos"
+        devices["version"] = choice(["J6.23.1", "8.43.12", "6.45", "6.03"])
+
     print(devices)
