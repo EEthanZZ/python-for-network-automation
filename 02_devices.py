@@ -23,9 +23,6 @@ for i in range(1, 5):
         devices["os"] = "eos"
         devices["version"] = choice(["a", "b", "c"])
     devices["ip"] = "10.0.0." + str(i)
-    print()
-    for key, value in devices.items():
-        print(f"{key:>16} : {value}")
     devices_list.append(devices)
 
 sorted_devices = sorted(
