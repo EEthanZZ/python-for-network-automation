@@ -2,7 +2,7 @@ from random import choice
 import string
 
 
-devices = []
+devices_list = []
 
 for i in range(1, 5):
     devices = dict()
@@ -22,4 +22,7 @@ for i in range(1, 5):
         devices["os"] = "eos"
         devices["version"] = choice(["a", "b", "c"])
     devices["ip"] = "10.0.0." + str(i)
-    print(devices)
+    print()
+    for key, value in devices.items():
+        print(f"{key:>16} : {value}")
+    devices_list.append(devices)
