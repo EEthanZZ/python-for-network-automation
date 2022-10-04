@@ -1,6 +1,7 @@
+from operator import itemgetter
 from random import choice
 import string
-
+from tabulate import tabulate
 
 devices_list = []
 
@@ -26,3 +27,7 @@ for i in range(1, 5):
     for key, value in devices.items():
         print(f"{key:>16} : {value}")
     devices_list.append(devices)
+
+sorted_devices = sorted(
+    devices_list, key=itemgetter("vendor", "os", "version"))
+print(tabulate(sorted_devices, headers="keys"))
