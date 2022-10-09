@@ -28,7 +28,9 @@ def create_devices(num_device=1, num_subnets=1):
             elif device["vendor"] == "asista":
                 device["os"] = "eos"
                 device["version"] = choice(["a", "b", "c"])
-            device["ip"] = "10.0.0." + str(i)
+            device["ip"] = "10.0." + str(i) + str(x)
             created_devices.append(device)
+
+    return created_devices
     # devices = create_devices(5, 4)
     # print(tabulate(devices, headers="keys"))
