@@ -1,14 +1,17 @@
 from random import choice
 import string
 
-def create_devices(num_device, num_subnets):
-    created_devices = ()
+from tabulate import tabulate
+
+
+def create_devices(num_device=1, num_subnets=1):
+    created_devices = list()
     if num_device > 254 or num_subnets > 254:
         print("wrong")
         return created_devices
 
-    for i in range(1, num_subnets + 1):
-        for i in range(1, num_device + 1):
+    for i in range(1, num_subnets+1):
+        for x in range(1, num_device+1):
             device = dict()
             device["name"] = (
                     choice(["r2", "r3", "r4", "r6", "r10"])
@@ -27,3 +30,5 @@ def create_devices(num_device, num_subnets):
                 device["version"] = choice(["a", "b", "c"])
             device["ip"] = "10.0.0." + str(i)
             created_devices.append(device)
+    # devices = create_devices(5, 4)
+    # print(tabulate(devices, headers="keys"))
