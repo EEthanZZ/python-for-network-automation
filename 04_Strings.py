@@ -26,3 +26,22 @@ for i in device1_str.split(","):
     x = i.strip()
     device_list.append(x)
 print("    ", device_list)
+
+# List comprehension to remove blanks
+device1 = [i.strip() for i in device1_str.split(",")]
+print("    ", device1)
+
+
+print("------------------------------------------------------------------")
+model = "CSR1000V"
+if model == "csr1000v":
+    print(f"match: {model}")
+elif model.lower() == "csr1000v":
+    print(f"match: {model} with the lower method")
+else:
+    print(f"not matched: {model}")
+
+
+
+
+
