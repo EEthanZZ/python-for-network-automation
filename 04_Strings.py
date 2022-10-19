@@ -9,3 +9,7 @@ print("    ", device1)
 device1 = device1_str.strip().split(",")
 print("device1 using strip() and split")
 print("    ", device1)
+
+# REPLACE
+device1 = device1_str.replace(" ", "").split(",")
+print("device1 using replace() to replace all blanks: \n    ", device1)
